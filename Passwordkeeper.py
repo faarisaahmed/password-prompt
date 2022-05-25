@@ -1,4 +1,4 @@
- allpasswords = {}
+allpasswords = {}
 
 print ("\n\nWelcome to your password keeping app! Now type in a password to get started.")
 password=input ("Please enter your password here> ")
@@ -13,8 +13,13 @@ for _ in range(1000):
         sitepass=input(f"Got it. what is your password for {sitename}? ")
         allpasswords[sitename]=sitepass
         
-    if search.upper()=="SEARCH LOGINS":
+    elif search.upper()=="SEARCH LOGINS":
         sitename=input("Okay, so which website's logging do you want? ")
         masterpass=input(f"Got it, what is your master password? ")
         if masterpass==password:
             print(f"The password for {sitename} is {allpasswords[sitename]}.")
+        else:
+            print("Sorry, that is not the master password, so I cannot give you what you want. ")
+
+    else:
+        print("The only options are [New Login] [Search Logins] - please select properly")
