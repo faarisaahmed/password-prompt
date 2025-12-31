@@ -6,7 +6,7 @@ print ("Good. You will have to remember that so you can see your passwords.")
 username=input ("Now, please type in your name> ")
 print (f"Well {username}, in this password keeping app, you can do a couple of things. To add a new password/username, type in new login and enter the website name that you are adding for. Then add the login for it. Now to search your password/username, type in the name of it and you can see it. Good. Well, now you know how to use this app. Continue!")
 
-for _ in range(1000):
+while True:
     search=input ("\n Type in [New Login] [Search Logins] ")
     if search.upper()=="NEW LOGIN":
         sitename=input("New Login. Okay, for which website? ")
